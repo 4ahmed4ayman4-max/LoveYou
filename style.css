@@ -15,7 +15,9 @@ body {
 
 canvas {
     display: block;
-    /* لو عايزه ناعم شيل السطرين دول */
+    width: 100vw;
+    height: auto;
+    max-height: 100vh;
+    object-fit: contain;
     image-rendering: pixelated;
-    image-rendering: crisp-edges;
 }

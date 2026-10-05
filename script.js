@@ -531,7 +531,7 @@ async function namePhase() {
     const n = text.length;
 
     // Auto-fit scale
-    const maxW = SW * 0.92;
+    const maxW = SW * 0.82;
     const maxH = SH * 0.55;
     let scale = Math.min(
         Math.floor(maxW / (n * 6 - 1)),
