@@ -1,4 +1,4 @@
-/* ───────── الأساس (لاب/ديسكتوب) ───────── */
+/* ─── Reset ─── */
 html, body {
     margin: 0;
     padding: 0;
@@ -20,33 +20,15 @@ canvas {
     image-rendering: crisp-edges;
 }
 
-/* ───────── موبايل (شاشة أقل من 768px) ───────── */
-@media (max-width: 768px) {
-    body {
-        padding: 0 20vw;       /* 20% يمين + 20% شمال */
-        box-sizing: border-box;
-    }
+/* ─── موبايل: 60% عرض + 20% هامش على كل جنب ─── */
+@media screen and (max-width: 768px) {
     canvas {
-        width: 100% !important;
+        width: 60vw !important;
+        max-width: 60vw !important;
+        min-width: 60vw !important;
         height: auto !important;
-        max-height: 90vh !important;
-    }
-}
-
-/* ───────── موبايل صغير أوي (أقل من 400px) ───────── */
-@media (max-width: 400px) {
-    body {
-        padding: 0 15vw;       /* هوامش 15% على الجنابين */
-    }
-}
-
-/* ───────── موبايل بالعرض (landscape) ───────── */
-@media (max-width: 768px) and (orientation: landscape) {
-    body {
-        padding: 0 10vw;
-    }
-    canvas {
-        width: auto !important;
-        height: 80vh !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        flex: 0 0 auto !important;
     }
 }
