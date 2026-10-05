@@ -1,3 +1,4 @@
+/* ───────── الأساس (لاب/ديسكتوب) ───────── */
 html, body {
     margin: 0;
     padding: 0;
@@ -15,9 +16,37 @@ body {
 
 canvas {
     display: block;
-    width: 100vw;
-    height: auto;
-    max-height: 100vh;
-    object-fit: contain;
     image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+/* ───────── موبايل (شاشة أقل من 768px) ───────── */
+@media (max-width: 768px) {
+    body {
+        padding: 0 20vw;       /* 20% يمين + 20% شمال */
+        box-sizing: border-box;
+    }
+    canvas {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 90vh !important;
+    }
+}
+
+/* ───────── موبايل صغير أوي (أقل من 400px) ───────── */
+@media (max-width: 400px) {
+    body {
+        padding: 0 15vw;       /* هوامش 15% على الجنابين */
+    }
+}
+
+/* ───────── موبايل بالعرض (landscape) ───────── */
+@media (max-width: 768px) and (orientation: landscape) {
+    body {
+        padding: 0 10vw;
+    }
+    canvas {
+        width: auto !important;
+        height: 80vh !important;
+    }
 }
